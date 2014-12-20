@@ -1,2 +1,2 @@
 Run the scripts with  
-<code>sudo <script-name> </code>
+<code>sudo \<script-name\> </code>
