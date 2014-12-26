@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd _posts
 DATE=`date +%Y-%m-%d`
 
@@ -6,7 +8,9 @@ if [ "$#" -eq 0 ]; then
 elif [ "$#" -eq 1 ]; then
 	POSTNAME=$1
 	NAME=${POSTNAME// /-}
-	FILENAME=$DATE-$NAME.md
+	LOWERCASE="$(echo $NAME | tr '[A-Z]' '[a-z]')"
+	FINAL="$(echo ${LOWERCASE//[._,\'!?]/})"
+	FILENAME=$DATE-$FINAL.md
 else 
 	echo "Illegal number of parameters"
 	exit
