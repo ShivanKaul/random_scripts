@@ -1,11 +1,27 @@
 cd _posts
 DATE=`date +%Y-%m-%d`
-FILENAME=$DATE-new-post.md
+
+if [ "$#" -eq 0 ]; then
+	FILENAME=$DATE-new-post.md
+elif [ "$#" -eq 1 ]; then
+	POSTNAME=$1
+	NAME=${POSTNAME// /-}
+	FILENAME=$DATE-$NAME.md
+else 
+	echo "Illegal number of parameters"
+	exit
+fi
+
 touch $FILENAME
 
 echo '---' >> $FILENAME
 echo 'layout: post' >> $FILENAME
-echo 'title:  "New Post"' >> $FILENAME
+
+if [ "$#" -eq 0 ]; then
+	echo 'title:  "New Post"' >> $FILENAME
+else
+	echo "title:  $1" >> $FILENAME
+fi
+
 echo '---' >> $FILENAME
 vi $FILENAME
-
