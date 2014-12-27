@@ -9,7 +9,7 @@ elif [ "$#" -eq 1 ]; then
 	POSTNAME=$1
 	NAME=${POSTNAME// /-}
 	LOWERCASE="$(echo $NAME | tr '[A-Z]' '[a-z]')"
-	FINAL="$(echo ${LOWERCASE//[._,\'!?]/})"
+	FINAL="$(echo ${LOWERCASE//[._,\'!?#:]/})"
 	FILENAME=$DATE-$FINAL.md
 else 
 	echo "Illegal number of parameters"
@@ -24,7 +24,7 @@ echo 'layout: post' >> $FILENAME
 if [ "$#" -eq 0 ]; then
 	echo 'title:  "New Post"' >> $FILENAME
 else
-	echo "title:  $1" >> $FILENAME
+	echo "title:  \"$1\"" >> $FILENAME
 fi
 
 echo '---' >> $FILENAME
