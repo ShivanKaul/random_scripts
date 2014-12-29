@@ -27,5 +27,6 @@ else
 	echo "title:  \"$1\"" >> $FILENAME
 fi
 
+echo 'comments: True' >> $FILENAME
 echo '---' >> $FILENAME
 vi $FILENAME
