@@ -1,2 +1,4 @@
-Run the scripts in the top-level directory with  
-<code>sudo ./\<script-name\> </code>
+Dotfiles in `dotfiles`.
+Scripts lie scattered here and there.
+
+Caveat emptor, obviously.
