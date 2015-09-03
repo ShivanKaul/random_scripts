@@ -1,0 +1,6 @@
+# Input file example
+AccountID: <uuid1> (Email: ...) etc.
+AccountID: <uuid2> (Email: ...) etc.
+
+# Bash command to match and output only uuids
+cat /tmp/users.txt | grep -oP '(?<=AccountID:) [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
