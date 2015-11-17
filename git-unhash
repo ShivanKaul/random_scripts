@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Git utility command to show contents of blob from subfoldered hash
+# Usage: git unhash .git/objects/11/<rest-of-SHA1-hash>
+
+TOKENS=(${1//\// })
+HASH=${TOKENS[${#TOKENS[@]} - 2]}${TOKENS[${#TOKENS[@]} - 1]}
+
+git show $HASH
