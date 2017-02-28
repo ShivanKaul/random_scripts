@@ -21,7 +21,7 @@ find . -type f -name "$name-*.zip" -exec rm {} +
 if [[ "$OSTYPE" == "darwin"* ]]; then
         # Mac OSX, so remove all .DS_Stores
 	echo "Removing .DS_Stores..."
-        find . -name ‘*.DS_Store’ -type f -delete
+        find . -name '*.DS_Store' -type f -delete
 	echo "Done."
 fi
 
