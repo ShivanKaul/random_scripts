@@ -1,4 +1,5 @@
-export PS1="\[\e[1;32m\]\w\[\e[0m\]\[\e[1;31m\]\$(parse_git_branch) #\[\e[0m\] " 
+export PS1="\[\e[1;32m\]\w\[\e[0m\]\[\e[1;31m\]\$(parse_git_branch) 🐻 \[\e[0m\] " 
+#export PS1="\[\e[1;32m\]\w\[\e[0m\]\[\e[1;31m\]\$(parse_git_branch) #\[\e[0m\] " 
 export PEEPDIR="/Users/shivan/private/PeepholeContest"
 parse_git_branch() {
 
@@ -48,7 +49,7 @@ export ZOOKEEPER="192.168.99.100:2181"
 # Sublime
 export EDITOR='subl -w'
 #export PATH="`brew --prefix`/bin:$PATH"
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 eval "$(rbenv init -)"
 
@@ -61,7 +62,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Setting PATH for Python 3.4
 # The orginal version is saved in .bash_profile.pysave
-export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:$PATH"
+#export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:$PATH"
 
 # Wisdom
 #fortune | cowsay -f tux | lolcat
@@ -79,3 +80,10 @@ alias serve="bundle exec jekyll serve"
 
 # Tinfoil
 HOMEBREW_NO_ANALYTICS=1
+export PATH="/usr/local/sbin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# Let forward searching work as well - Ctrl + S
+stty -ixon
+

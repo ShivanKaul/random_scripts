@@ -1,0 +1,9 @@
+{
+	"add_to_PATH":
+	[
+		"/Users/shivan/.cabal/bin"
+	],
+	"enable_ghc_mod": false,
+	"enable_hdevtools": false,
+	"enable_hsdev": false
+}

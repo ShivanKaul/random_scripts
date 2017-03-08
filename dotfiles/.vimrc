@@ -20,5 +20,11 @@ endif
 
 :set nu
 :set mouse=a 
-set statusline+=%F
-set clipboard=unnamed
+:set statusline+=%F
+:set clipboard=unnamed
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+
+
+

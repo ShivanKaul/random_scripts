@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/shivan/private/CodeJam2015_Get-Low/.git'
+let g:netrw_dirhist_2='/Users/shivan/.vim/bundle/snipmate.vim'
+let g:netrw_dirhist_3='/Users/shivan/private/compilers/assignment2/src/TEST_PROGRAMS/VALID/xoey_zhang'
+let g:netrw_dirhist_4='/Users/shivan/private/Ciena-Project-Web/config'
+let g:netrw_dirhist_5='/Users/shivan/private/Ciena-Project-Web'
+let g:netrw_dirhist_6='/Users/shivan/private/Ciena-Project-Backbone/docker'

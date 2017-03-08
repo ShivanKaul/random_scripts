@@ -1,0 +1,31 @@
+[
+	{ "keys": ["f10"], "command": "reindent", "args": {"single_line": false}},
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+	{ "keys": ["super+shift+space"], "command": "expand_region" },
+	{
+		"keys": ["super+u"],
+		"command": "expand_region",
+		"args": {"undo": true},
+		"context": [{ "key": "expand_region_soft_undo" }]
+	},
+	{ "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
+	{ "keys": ["super+shift+l"],
+      "command": "insert_snippet",
+      "args": {
+        "contents": "console.log(${1:}$SELECTION);${0}"
+      }, "context":
+      [
+        { "key": "selector", "operator": "equal", "operand": "source.js", "match_all": true }
+      ]
+    },
+    { "keys": ["super+shift+l"],
+      "command": "insert_snippet",
+      "args": {
+        "contents": "NSLog(@\"${1:}$SELECTION\"$2);\n${0}"
+      }, "context":
+      [
+        { "key": "selector", "operator": "equal", "operand": "source.objc", "match_all": true }
+      ]
+    }
+]
