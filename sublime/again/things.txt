@@ -1,0 +1,2 @@
+Packages/User/Preferences.sublime-settings for settings
+Packages/User/Package Control.sublime-settings for list of plugins
