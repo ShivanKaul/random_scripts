@@ -1,9 +1,7 @@
-export PS1="\[\e[1;32m\]\w\[\e[0m\]\[\e[1;31m\]\$(parse_git_branch) 🐻 \[\e[0m\] " 
+export PS1='\[\e[31m\]$(hostname) \[\e[1;32m\]\w\[\e[1;31m\]$(parse_git_branch) 🐻 \[\e[0m\] ' 
 #export PS1="\[\e[1;32m\]\w\[\e[0m\]\[\e[1;31m\]\$(parse_git_branch) #\[\e[0m\] " 
-export PEEPDIR="/Users/shivan/private/PeepholeContest"
 parse_git_branch() {
-
-	    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 
@@ -83,6 +81,11 @@ HOMEBREW_NO_ANALYTICS=1
 export PATH="/usr/local/sbin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# tmux + iterm
+function cch {
+    ssh -t $@ "tmux -CC new -A -s foo"
+}
 
 # Let forward searching work as well - Ctrl + S
 stty -ixon
