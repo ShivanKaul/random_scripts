@@ -1,1 +1,2 @@
-Typically you want the .ssh directory permissions to be 700 (drwx------) and the public key (.pub file) to be 644 (-rw-r--r--). Your private key (id_rsa) should be 600 (-rw-------).
+Typically you want the .ssh directory permissions to be 700 (drwx------) and the public key (.pub file) 
+to be 644 (-rw-r--r--). Your private key (id_rsa) should be 600 (-rw-------).
