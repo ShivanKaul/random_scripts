@@ -1,4 +1,4 @@
-export PS1='\[\e[31m\]$(hostname) \[\e[1;32m\]\w\[\e[1;31m\]$(parse_git_branch) 🐻 \[\e[0m\] ' 
+export PS1='\[\e[31m\]$(hostname) \[\e[1;32m\]\w\[\e[1;31m\]$(parse_git_branch) \$[\e[0m\] ' 
 #export PS1="\[\e[1;32m\]\w\[\e[0m\]\[\e[1;31m\]\$(parse_git_branch) #\[\e[0m\] " 
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
