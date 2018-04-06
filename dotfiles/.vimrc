@@ -26,5 +26,46 @@ endif
 :set shiftwidth=4
 :set expandtab
 
+" auto paste functionality:
+" https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
+function! WrapForTmux(s)
+  if !exists('$TMUX')
+    return a:s
+  endif
+
+  let tmux_start = "\<Esc>Ptmux;"
+  let tmux_end = "\<Esc>\\"
+
+  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+endfunction
+
+
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
+" For vimdiff:
+hi DiffAdd    ctermfg=233 ctermbg=194 guifg=#003300 guibg=#DDFFDD gui=none cterm=none
+hi DiffChange ctermbg=255  guibg=#ececec gui=none   cterm=none
+hi DiffText   ctermfg=233  ctermbg=189  guifg=#000033 guibg=#DDDDFF gui=none cterm=none
+hi DiffDelete ctermfg=252 ctermbg=224   guifg=#DDCCCC guibg=#FFDDDD gui=none    cterm=none
+
+
+
+if has('persistent_undo')
+    set undolevels=10000
+    set undoreload=50000
+    set undodir=$HOME/.VIM_UNDO_FILES
+    set undofile
+endif
+set history=2000 " change history to 1000
+
+set relativenumber
+
+
+
 
 
