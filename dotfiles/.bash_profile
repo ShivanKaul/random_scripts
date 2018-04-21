@@ -19,7 +19,7 @@ if [ -f ~/.bash_projects ]; then
 fi
 
 # Haskell
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+#export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
@@ -27,21 +27,22 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # Sublime
 export EDITOR='subl -w'
-#export PATH="`brew --prefix`/bin:$PATH"
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+# Python
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 #eval "$(rbenv init -)"
 
 ### Go
-export GOPATH=$HOME/private/go
-export PATH=$PATH:$GOPATH/bin
+#export GOPATH=$HOME/private/go
+#export PATH=$PATH:$GOPATH/bin
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
 
 # Setting PATH for Python 3.4
 # The orginal version is saved in .bash_profile.pysave
-export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:$PATH"
+#export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:$PATH"
 
 # Wisdom
 #fortune | cowsay -f tux | lolcat
@@ -69,9 +70,10 @@ function cch {
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
-source ~/bash_startup.in
+#source ~/bash_startup.in
 
-export PATH="$HOME/.cargo/bin:$PATH"
+# Rust
+#export PATH="$HOME/.cargo/bin:$PATH"
 
 # added by Anaconda2 5.0.1 installer
-export PATH="/anaconda2/bin:$PATH"
+#export PATH="/anaconda2/bin:$PATH"
