@@ -1,6 +1,6 @@
 " Pathogen load
 filetype on
-call pathogen#infect()
+" call pathogen#infect()
 filetype plugin indent on
 syntax on
 set t_Co=256
