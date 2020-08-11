@@ -63,7 +63,8 @@ if has('persistent_undo')
 endif
 set history=2000 " change history to 1000
 
-set relativenumber
+" relative numbering: https://vi.stackexchange.com/questions/3/how-can-i-show-relative-line-numbers
+" set relativenumber
 
 
 
