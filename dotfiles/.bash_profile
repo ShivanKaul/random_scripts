@@ -77,3 +77,5 @@ function cch {
 
 # added by Anaconda2 5.0.1 installer
 #export PATH="/anaconda2/bin:$PATH"
+
+export BASH_SILENCE_DEPRECATION_WARNING=1 # remove warning for bash on macos
